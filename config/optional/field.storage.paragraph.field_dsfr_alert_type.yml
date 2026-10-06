@@ -4,6 +4,9 @@ dependencies:
   module:
   - options
   - paragraphs
+  enforced:
+    module:
+    - dsfr_editorial
 id: paragraph.field_dsfr_alert_type
 field_name: field_dsfr_alert_type
 entity_type: paragraph

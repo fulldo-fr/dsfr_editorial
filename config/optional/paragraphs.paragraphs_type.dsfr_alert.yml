@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies:
+  enforced:
+    module:
+    - dsfr_editorial
 id: dsfr_alert
 label: Alert
 description: 'A service message that must be seen: a suspended procedure, a deadline,

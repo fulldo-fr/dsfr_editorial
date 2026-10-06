@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies:
+  enforced:
+    module:
+    - dsfr_editorial
 id: dsfr_tabs
 label: Tabs
 description: Contents of the same kind shown side by side, one at a time. Do not use

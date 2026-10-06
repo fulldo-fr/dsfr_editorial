@@ -4,6 +4,9 @@ dependencies:
   module:
   - paragraphs
   - text
+  enforced:
+    module:
+    - dsfr_editorial
 id: paragraph.field_dsfr_body
 field_name: field_dsfr_body
 entity_type: paragraph

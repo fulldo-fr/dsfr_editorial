@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
   - paragraphs
+  enforced:
+    module:
+    - dsfr_editorial
 id: paragraph.field_dsfr_source
 field_name: field_dsfr_source
 entity_type: paragraph

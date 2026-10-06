@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies:
+  enforced:
+    module:
+    - dsfr_editorial
 id: dsfr_highlight
 label: Highlight
 description: A sentence of the text that readers should remember.

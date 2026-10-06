@@ -4,6 +4,9 @@ dependencies:
   module:
   - entity_reference_revisions
   - paragraphs
+  enforced:
+    module:
+    - dsfr_editorial
 id: paragraph.field_dsfr_items
 field_name: field_dsfr_items
 entity_type: paragraph

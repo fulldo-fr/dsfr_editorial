@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies:
+  enforced:
+    module:
+    - dsfr_editorial
 id: dsfr_text
 label: Text
 description: 'Formatted text: headings, lists, links, tables.'

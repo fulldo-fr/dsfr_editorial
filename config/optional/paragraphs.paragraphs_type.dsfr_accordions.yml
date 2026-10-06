@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies:
+  enforced:
+    module:
+    - dsfr_editorial
 id: dsfr_accordions
 label: Accordions
 description: Questions or details that unfold on click. Essential information should
