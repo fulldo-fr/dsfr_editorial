@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {}
+id: dsfr_quote
+label: Quote
+description: Reported words, with their author.
+behavior_plugins: {}

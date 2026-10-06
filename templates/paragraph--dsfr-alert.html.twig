@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Alert section → DSFR alert component.
+ *
+ * The type chosen by the editor gives the component variant: color AND icon,
+ * never color alone (RGAA 3.1). The title is an h2, like any section title.
+ */
+#}
+<div{{ attributes.addClass('dsfr-editorial', 'dsfr-editorial--alert', 'fr-mb-6w') }}>
+  {% include 'ui_suite_dsfr:alert' with {
+    variant: paragraph.field_dsfr_alert_type.value|default('info'),
+    title_tag: 'h2',
+    title: paragraph.field_dsfr_heading.value,
+    message: paragraph.field_dsfr_summary.value,
+  } only %}
+</div>

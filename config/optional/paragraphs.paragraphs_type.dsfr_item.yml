@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {}
+id: dsfr_item
+label: Item (accordion or tab)
+description: 'Building block of accordions and tabs: a title and a formatted text.
+  Not added to a page directly.'
+behavior_plugins: {}

@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.paragraph.dsfr_tabs.field_dsfr_heading
+  - field.field.paragraph.dsfr_tabs.field_dsfr_items
+  - paragraphs.paragraphs_type.dsfr_tabs
+id: paragraph.dsfr_tabs.default
+targetEntityType: paragraph
+bundle: dsfr_tabs
+mode: default
+content:
+  field_dsfr_heading:
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    weight: 0
+    region: content
+  field_dsfr_items:
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

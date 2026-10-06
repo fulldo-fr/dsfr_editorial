@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_dsfr_body
+  - paragraphs.paragraphs_type.dsfr_item
+  module:
+  - text
+id: paragraph.dsfr_item.field_dsfr_body
+field_name: field_dsfr_body
+entity_type: paragraph
+bundle: dsfr_item
+label: Text
+description: ''
+required: true
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings:
+  allowed_formats: {}
+field_type: text_long

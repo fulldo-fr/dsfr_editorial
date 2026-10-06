@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Image section → DSFR content_media and transcription components.
+ *
+ * The detailed description of an informative image (chart, diagram, map) is
+ * the long text alternative required by RGAA 1.6. The DSFR presents it with
+ * the transcription component, collapsed, right under the image it describes.
+ */
+#}
+<div{{ attributes.addClass('dsfr-editorial', 'dsfr-editorial--media', 'fr-mb-6w') }}>
+  {% if dsfr_image %}
+    {% include 'ui_suite_dsfr:content_media' with {
+      image: dsfr_image,
+      caption: dsfr_caption,
+    } only %}
+  {% endif %}
+  {% if dsfr_description %}
+    {% include 'ui_suite_dsfr:transcription' with {
+      id: 'dsfr-description-' ~ paragraph.id.value,
+      title: 'Detailed description of the image'|t,
+      content: dsfr_description,
+      enlarge_text: 'Enlarge'|t,
+      enlarge_aria_label: 'Enlarge the description'|t,
+    } only %}
+  {% endif %}
+</div>

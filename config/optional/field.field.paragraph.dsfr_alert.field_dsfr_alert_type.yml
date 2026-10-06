@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_dsfr_alert_type
+  - paragraphs.paragraphs_type.dsfr_alert
+  module:
+  - options
+id: paragraph.dsfr_alert.field_dsfr_alert_type
+field_name: field_dsfr_alert_type
+entity_type: paragraph
+bundle: dsfr_alert
+label: Type
+description: Color and icon follow the type.
+required: true
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: list_string

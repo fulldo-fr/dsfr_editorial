@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_dsfr_items
+  - paragraphs.paragraphs_type.dsfr_accordions
+  module:
+  - entity_reference_revisions
+id: paragraph.dsfr_accordions.field_dsfr_items
+field_name: field_dsfr_items
+entity_type: paragraph
+bundle: dsfr_accordions
+label: Accordions
+description: 'One item per accordion: its title is the question, its text the answer.'
+required: true
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings:
+  handler: default:paragraph
+  handler_settings:
+    target_bundles:
+      dsfr_item: dsfr_item
+    negate: 0
+    target_bundles_drag_drop:
+      dsfr_item:
+        weight: 0
+        enabled: true
+field_type: entity_reference_revisions

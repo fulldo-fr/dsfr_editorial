@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * @file
+ * DSFR Editorial: content sections rendered with DSFR components.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\Core\Render\Markup;
+use Drupal\paragraphs\ParagraphInterface;
+
+/**
+ * Paragraph types provided by this module, with their template.
+ */
+function _dsfr_editorial_bundles(): array {
+  return [
+    'dsfr_text',
+    'dsfr_accordions',
+    'dsfr_tabs',
+    'dsfr_alert',
+    'dsfr_callout',
+    'dsfr_highlight',
+    'dsfr_quote',
+    'dsfr_table',
+    'dsfr_media',
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Templates are declared as paragraph suggestions, so a theme can still
+ * override any of them by providing a file with the same name.
+ */
+function dsfr_editorial_theme(): array {
+  $theme = [];
+  foreach (_dsfr_editorial_bundles() as $bundle) {
+    $theme['paragraph__' . $bundle] = [
+      'base hook' => 'paragraph',
+      'template' => 'paragraph--' . str_replace('_', '-', $bundle),
+    ];
+  }
+  return $theme;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph.
+ *
+ * Prepares values that templates cannot get by themselves: the Twig sandbox
+ * forbids calling view() on a field, and several DSFR components expect
+ * plain values or a bare img element rather than a rendered field.
+ */
+function dsfr_editorial_preprocess_paragraph(array &$variables): void {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph instanceof ParagraphInterface) {
+    return;
+  }
+  match ($paragraph->bundle()) {
+    'dsfr_accordions', 'dsfr_tabs' => _dsfr_editorial_items($variables, $paragraph),
+    'dsfr_media' => _dsfr_editorial_media($variables, $paragraph),
+    'dsfr_table' => _dsfr_editorial_table($variables, $paragraph),
+    default => NULL,
+  };
+}
+
+/**
+ * Title and rendered text of each accordion or tab item.
+ */
+function _dsfr_editorial_items(array &$variables, ParagraphInterface $paragraph): void {
+  $variables['dsfr_items'] = [];
+  foreach ($paragraph->get('field_dsfr_items')->referencedEntities() as $item) {
+    if (!$item->access('view')) {
+      continue;
+    }
+    $variables['dsfr_items'][] = [
+      'title' => $item->get('field_dsfr_heading')->value,
+      'text' => $item->get('field_dsfr_body')->view(['label' => 'hidden']),
+    ];
+    CacheableMetadata::createFromObject($item)
+      ->merge(CacheableMetadata::createFromRenderArray($variables))
+      ->applyTo($variables);
+  }
+}
+
+/**
+ * Bare img element, detailed description and caption of an image section.
+ */
+function _dsfr_editorial_media(array &$variables, ParagraphInterface $paragraph): void {
+  $variables['dsfr_image'] = NULL;
+  $variables['dsfr_description'] = $paragraph->get('field_dsfr_body')->isEmpty()
+    ? NULL
+    : $paragraph->get('field_dsfr_body')->view(['label' => 'hidden']);
+  $variables['dsfr_caption'] = trim((string) $paragraph->get('field_dsfr_summary')->value) ?: NULL;
+
+  $media = $paragraph->get('field_dsfr_media')->entity;
+  if ($media === NULL || !$media->hasField('field_media_image') || !$media->access('view')) {
+    return;
+  }
+  $image = $media->get('field_media_image')->first();
+  if ($image === NULL || $image->entity === NULL) {
+    return;
+  }
+  // The DSFR content media component expects the img element as a direct
+  // child, with the fr-responsive-img class. A rendered media field wraps it
+  // in several containers and the image keeps its intrinsic width.
+  $variables['dsfr_image'] = [
+    '#theme' => 'image_style',
+    '#style_name' => 'wide',
+    '#uri' => $image->entity->getFileUri(),
+    '#alt' => (string) $image->alt,
+    '#width' => $image->width,
+    '#height' => $image->height,
+    '#attributes' => ['class' => ['fr-responsive-img'], 'loading' => 'lazy'],
+  ];
+  CacheableMetadata::createFromObject($media)
+    ->merge(CacheableMetadata::createFromRenderArray($variables))
+    ->applyTo($variables);
+}
+
+/**
+ * Filtered table text, with the section title as the table caption.
+ */
+function _dsfr_editorial_table(array &$variables, ParagraphInterface $paragraph): void {
+  $variables['dsfr_table'] = NULL;
+  $text = $paragraph->get('field_dsfr_body')->first();
+  if ($text === NULL) {
+    return;
+  }
+  $processed = [
+    '#type' => 'processed_text',
+    '#text' => $text->value,
+    '#format' => $text->format,
+  ];
+  $html = (string) \Drupal::service('renderer')->renderInIsolation($processed);
+  $title = trim((string) $paragraph->get('field_dsfr_heading')->value);
+
+  // Accessibility guidelines expect the title of a data table in its caption
+  // (RGAA 5.4). A caption written in the editor takes precedence.
+  if ($title !== '' && str_contains($html, '<table')) {
+    $document = Html::load($html);
+    $table = $document->getElementsByTagName('table')->item(0);
+    if ($table->getElementsByTagName('caption')->length === 0) {
+      $caption = $document->createElement('caption');
+      $caption->appendChild($document->createTextNode($title));
+      $table->insertBefore($caption, $table->firstChild);
+    }
+    $html = Html::serialize($document);
+  }
+  // The HTML comes from the text format filters: it is already sanitized.
+  $variables['dsfr_table'] = ['#markup' => Markup::create($html)];
+  $variables['#cache']['tags'][] = 'config:filter.format.' . $text->format;
+}

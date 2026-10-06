@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Tabs section → DSFR tabs, tab and tab_panel components.
+ *
+ * The first tab is selected. Tab and panel ids derive from the paragraph id.
+ */
+#}
+{% set heading = paragraph.field_dsfr_heading.value %}
+{% set prefix = 'dsfr-tab-' ~ paragraph.id.value %}
+{% set tabs = [] %}
+{% set panels = [] %}
+{% for item in dsfr_items %}
+  {% if item.title %}
+    {% set id = prefix ~ '-' ~ loop.index %}
+    {% set variant = loop.first ? 'selected' : 'default' %}
+    {% set tabs = tabs|merge([include('ui_suite_dsfr:tab', { id: id, variant: variant, title: item.title }, with_context = false)]) %}
+    {% set panels = panels|merge([include('ui_suite_dsfr:tab_panel', { id: id, variant: variant, content: item.text }, with_context = false)]) %}
+  {% endif %}
+{% endfor %}
+<div{{ attributes.addClass('dsfr-editorial', 'dsfr-editorial--tabs', 'fr-mb-6w') }}>
+  {% if heading %}
+    <h2 class="fr-h3">{{ heading }}</h2>
+  {% endif %}
+  {% include 'ui_suite_dsfr:tabs' with {
+    label: heading ?: 'Tabs'|t,
+    items: tabs,
+    panels: panels,
+  } only %}
+</div>

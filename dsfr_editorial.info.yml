@@ -1,0 +1,17 @@
+name: 'DSFR Editorial'
+type: module
+description: 'Content sections (paragraphs) rendered with the components of the French government design system (DSFR), and a text filter that gives editor tables the DSFR markup and accessible header scopes.'
+package: DSFR
+core_version_requirement: ^10.3 || ^11
+php: 8.1
+dependencies:
+  - drupal:filter
+  - drupal:text
+  - drupal:link
+  - drupal:options
+  - drupal:media
+  - drupal:media_library
+  - entity_reference_revisions:entity_reference_revisions
+  - paragraphs:paragraphs
+'interface translation project': dsfr_editorial
+'interface translation server pattern': modules/contrib/dsfr_editorial/translations/%language.po

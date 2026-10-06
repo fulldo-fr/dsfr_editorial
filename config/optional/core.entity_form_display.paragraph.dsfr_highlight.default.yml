@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.paragraph.dsfr_highlight.field_dsfr_summary
+  - paragraphs.paragraphs_type.dsfr_highlight
+id: paragraph.dsfr_highlight.default
+targetEntityType: paragraph
+bundle: dsfr_highlight
+mode: default
+content:
+  field_dsfr_summary:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings: {}
+    third_party_settings: {}
+hidden:
+  created: true
+  status: true

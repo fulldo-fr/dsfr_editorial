@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.paragraph.dsfr_accordions.field_dsfr_heading
+  - field.field.paragraph.dsfr_accordions.field_dsfr_items
+  - paragraphs.paragraphs_type.dsfr_accordions
+id: paragraph.dsfr_accordions.default
+targetEntityType: paragraph
+bundle: dsfr_accordions
+mode: default
+content:
+  field_dsfr_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_dsfr_items:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: item
+      title_plural: items
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: dsfr_item
+    third_party_settings: {}
+hidden:
+  created: true
+  status: true

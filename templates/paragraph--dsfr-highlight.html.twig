@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Highlight section → DSFR highlight component.
+ *
+ * DSFR vocabulary: "highlight" is a sentence set apart from the text, with a
+ * rule; "callout" is a block drawing attention to information.
+ */
+#}
+<div{{ attributes.addClass('dsfr-editorial', 'dsfr-editorial--highlight', 'fr-mb-6w') }}>
+  {% include 'ui_suite_dsfr:highlight' with { text: paragraph.field_dsfr_summary.value } only %}
+</div>

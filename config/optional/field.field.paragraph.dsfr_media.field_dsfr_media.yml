@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_dsfr_media
+  - media.type.image
+  - paragraphs.paragraphs_type.dsfr_media
+id: paragraph.dsfr_media.field_dsfr_media
+field_name: field_dsfr_media
+entity_type: paragraph
+bundle: dsfr_media
+label: Image
+description: Its alternative text is entered in the media library.
+required: true
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings:
+  handler: default:media
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

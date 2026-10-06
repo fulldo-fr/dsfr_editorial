@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {}
+id: dsfr_tabs
+label: Tabs
+description: Contents of the same kind shown side by side, one at a time. Do not use
+  tabs if visitors need to read everything.
+behavior_plugins: {}

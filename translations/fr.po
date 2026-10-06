@@ -1,0 +1,195 @@
+# French translation of DSFR Editorial.
+msgid ""
+msgstr ""
+"Project-Id-Version: dsfr_editorial\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+msgid "A block that draws attention to important information, with an optional button."
+msgstr "Un encadré qui attire le regard sur une information importante, avec un bouton facultatif."
+
+msgid "A content image, with its caption and, for charts, diagrams or maps, a detailed description."
+msgstr "Une image de contenu, avec sa légende et, pour un graphique, un schéma ou une carte, sa description détaillée."
+
+msgid "A sentence of the text that readers should remember."
+msgstr "Une phrase du texte que le lecteur doit retenir."
+
+msgid "A service message that must be seen: a suspended procedure, a deadline, a change."
+msgstr "Un message de service qui doit être vu : une démarche suspendue, une date limite, un changement."
+
+msgid "Accordions"
+msgstr "Accordéons"
+
+msgid "Alert"
+msgstr "Alerte"
+
+msgid "Author"
+msgstr "Auteur"
+
+msgid "Building block of accordions and tabs: a title and a formatted text. Not added to a page directly."
+msgstr "Brique des accordéons et des onglets : un titre et un texte mis en forme. Ne s'ajoute pas directement à une page."
+
+msgid "Button"
+msgstr "Bouton"
+
+msgid "Callout"
+msgstr "Mise en avant"
+
+msgid "Caption"
+msgstr "Légende"
+
+msgid "Color and icon follow the type."
+msgstr "La couleur et l'icône suivent la nature choisie."
+
+msgid "Contents of the same kind shown side by side, one at a time. Do not use tabs if visitors need to read everything."
+msgstr "Des contenus de même nature présentés côte à côte, un seul visible à la fois. Si le visiteur doit tout lire, n'utilisez pas d'onglets."
+
+msgid "DSFR table markup"
+msgstr "Balisage DSFR des tableaux"
+
+msgid "Data table"
+msgstr "Tableau de données"
+
+msgid "Data to compare in rows and columns. Never use a table for layout."
+msgstr "Des données à comparer en lignes et en colonnes. Jamais de tableau pour de la mise en page."
+
+msgid "Detailed description"
+msgstr "Description détaillée"
+
+msgid "Detailed description of the image"
+msgstr "Description détaillée de l'image"
+
+msgid "Details"
+msgstr "Précision"
+
+msgid "Enlarge"
+msgstr "Agrandir"
+
+msgid "Enlarge the description"
+msgstr "Agrandir la description"
+
+msgid "Error"
+msgstr "Erreur"
+
+msgid "Formatted text: headings, lists, links, tables."
+msgstr "Texte mis en forme : titres, listes, liens, tableaux."
+
+msgid "Highlight"
+msgstr "Mise en exergue"
+
+msgid "Highlighted text"
+msgstr "Texte en exergue"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Image with caption"
+msgstr "Image légendée"
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Insert the table with the editor \"Table\" button and declare the first row as a header row."
+msgstr "Insérez le tableau avec le bouton « Tableau » de l'éditeur et déclarez la première ligne comme ligne d'en-tête."
+
+msgid "It becomes the caption of the table, as accessibility guidelines require."
+msgstr "Il devient la légende (caption) du tableau, comme l'exige le RGAA."
+
+msgid "Item (accordion or tab)"
+msgstr "Élément (accordéon ou onglet)"
+
+msgid "Its alternative text is entered in the media library."
+msgstr "Son texte alternatif se saisit dans la médiathèque."
+
+msgid "One item per accordion: its title is the question, its text the answer."
+msgstr "Un élément par accordéon : son titre est la question, son texte la réponse."
+
+msgid "One or two optional sentences."
+msgstr "Une ou deux phrases facultatives."
+
+msgid "One to three sentences."
+msgstr "Une à trois phrases."
+
+msgid "Optional, for example \"Frequently asked questions\"."
+msgstr "Facultatif, par exemple « Questions fréquentes »."
+
+msgid "Optional. It says what the tabs compare."
+msgstr "Facultatif. Il annonce ce que les onglets comparent."
+
+msgid "Questions or details that unfold on click. Essential information should not be hidden in an accordion."
+msgstr "Des questions ou des précisions qui se déplient au clic. Une information essentielle ne doit pas être cachée dans un accordéon."
+
+msgid "Quote"
+msgstr "Citation"
+
+msgid "Reported words, with their author."
+msgstr "Une parole rapportée, avec son auteur."
+
+msgid "Required for a chart, a diagram or a map: everything the image shows, written as text."
+msgstr "Obligatoire pour un graphique, un schéma ou une carte : tout ce que l'image montre, rédigé en texte."
+
+msgid "Role, organisation or publication."
+msgstr "Fonction, organisme ou publication."
+
+msgid "Section title"
+msgstr "Titre de la section"
+
+msgid "Shown under the image."
+msgstr "Affichée sous l'image."
+
+msgid "Source"
+msgstr "Source"
+
+msgid "Success"
+msgstr "Réussite"
+
+msgid "Table"
+msgstr "Tableau"
+
+msgid "Table title"
+msgstr "Titre du tableau"
+
+msgid "Tables get the DSFR markup; header cells in the first row apply to their column, header cells starting a row apply to their row."
+msgstr "Les tableaux reçoivent le balisage DSFR ; les cellules d'en-tête de la première ligne s'appliquent à leur colonne, celles qui commencent une ligne à leur ligne."
+
+msgid "Tabs"
+msgstr "Onglets"
+
+msgid "Text"
+msgstr "Texte"
+
+msgid "The accordion question or the tab label."
+msgstr "La question de l'accordéon ou le libellé de l'onglet."
+
+msgid "The button label must make sense on its own."
+msgstr "L'intitulé du bouton doit être compréhensible seul."
+
+msgid "The message in one sentence."
+msgstr "Le message en une phrase."
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Two or three sentences at most."
+msgstr "Deux ou trois phrases au plus."
+
+msgid "Two to five tabs; each tab label fits in two or three words."
+msgstr "Deux à cinq onglets ; chaque libellé tient en deux ou trois mots."
+
+msgid "Type"
+msgstr "Nature"
+
+msgid "Use heading levels in order, starting at level 2."
+msgstr "Utilisez les niveaux de titre dans l'ordre, en commençant au niveau 2."
+
+msgid "Warning"
+msgstr "Attention"
+
+msgid "Without quotation marks: they are added automatically."
+msgstr "Sans guillemets : ils sont ajoutés automatiquement."
+
+msgid "Wraps tables in the DSFR table containers and adds the scope of header cells."
+msgstr "Place les tableaux dans les conteneurs du composant tableau du DSFR et ajoute la portée des cellules d'en-tête."

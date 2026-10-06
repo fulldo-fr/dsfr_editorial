@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Quote section → DSFR quote component.
+ *
+ * The "source" slot is iterated by the component: it expects a list.
+ */
+#}
+<div{{ attributes.addClass('dsfr-editorial', 'dsfr-editorial--quote') }}>
+  {% include 'ui_suite_dsfr:quote' with {
+    quote: paragraph.field_dsfr_summary.value,
+    author: paragraph.field_dsfr_author.value,
+    source: paragraph.field_dsfr_source.value ? [paragraph.field_dsfr_source.value] : [],
+  } only %}
+</div>

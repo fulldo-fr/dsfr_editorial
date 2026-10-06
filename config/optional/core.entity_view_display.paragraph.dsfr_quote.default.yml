@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.paragraph.dsfr_quote.field_dsfr_author
+  - field.field.paragraph.dsfr_quote.field_dsfr_source
+  - field.field.paragraph.dsfr_quote.field_dsfr_summary
+  - paragraphs.paragraphs_type.dsfr_quote
+id: paragraph.dsfr_quote.default
+targetEntityType: paragraph
+bundle: dsfr_quote
+mode: default
+content:
+  field_dsfr_author:
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    weight: 1
+    region: content
+  field_dsfr_source:
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    weight: 2
+    region: content
+  field_dsfr_summary:
+    label: hidden
+    settings: {}
+    third_party_settings: {}
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

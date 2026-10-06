@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Accordions section → DSFR accordion_group and accordion components.
+ *
+ * The question heading level is h3 when the section has an h2 title, h2
+ * otherwise: the heading hierarchy stays continuous (RGAA 9.1). Accordion
+ * ids derive from the paragraph id, so they are stable and unique in the page.
+ */
+#}
+{% set heading = paragraph.field_dsfr_heading.value %}
+{% set accordions = [] %}
+{% for item in dsfr_items %}
+  {% if item.title %}
+    {% set accordions = accordions|merge([
+      include('ui_suite_dsfr:accordion', {
+        id: 'dsfr-accordion-' ~ paragraph.id.value ~ '-' ~ loop.index,
+        title_tag: heading ? 'h3' : 'h2',
+        title: item.title,
+        content: item.text,
+      }, with_context = false)
+    ]) %}
+  {% endif %}
+{% endfor %}
+<div{{ attributes.addClass('dsfr-editorial', 'dsfr-editorial--accordions', 'fr-mb-6w') }}>
+  {% if heading %}
+    <h2 class="fr-h3">{{ heading }}</h2>
+  {% endif %}
+  {% include 'ui_suite_dsfr:accordion_group' with { accordions: accordions } only %}
+</div>

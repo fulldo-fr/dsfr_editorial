@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {}
+id: dsfr_media
+label: Image with caption
+description: A content image, with its caption and, for charts, diagrams or maps,
+  a detailed description.
+behavior_plugins: {}

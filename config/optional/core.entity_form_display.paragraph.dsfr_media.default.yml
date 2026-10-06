@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.paragraph.dsfr_media.field_dsfr_body
+  - field.field.paragraph.dsfr_media.field_dsfr_media
+  - field.field.paragraph.dsfr_media.field_dsfr_summary
+  - paragraphs.paragraphs_type.dsfr_media
+id: paragraph.dsfr_media.default
+targetEntityType: paragraph
+bundle: dsfr_media
+mode: default
+content:
+  field_dsfr_body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_dsfr_media:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_dsfr_summary:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings: {}
+    third_party_settings: {}
+hidden:
+  created: true
+  status: true

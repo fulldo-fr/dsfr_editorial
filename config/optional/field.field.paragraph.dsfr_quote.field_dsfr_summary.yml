@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_dsfr_summary
+  - paragraphs.paragraphs_type.dsfr_quote
+id: paragraph.dsfr_quote.field_dsfr_summary
+field_name: field_dsfr_summary
+entity_type: paragraph
+bundle: dsfr_quote
+label: Quote
+description: 'Without quotation marks: they are added automatically.'
+required: true
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string_long

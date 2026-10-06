@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.paragraph.dsfr_callout.field_dsfr_body
+  - field.field.paragraph.dsfr_callout.field_dsfr_heading
+  - field.field.paragraph.dsfr_callout.field_dsfr_link
+  - paragraphs.paragraphs_type.dsfr_callout
+id: paragraph.dsfr_callout.default
+targetEntityType: paragraph
+bundle: dsfr_callout
+mode: default
+content:
+  field_dsfr_body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_dsfr_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings: {}
+    third_party_settings: {}
+  field_dsfr_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings: {}
+    third_party_settings: {}
+hidden:
+  created: true
+  status: true

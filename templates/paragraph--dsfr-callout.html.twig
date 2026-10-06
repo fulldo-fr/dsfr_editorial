@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Callout section → DSFR callout component, with an optional button.
+ */
+#}
+{% set button %}
+  {% if paragraph.field_dsfr_link.0 %}
+    {% include 'ui_suite_dsfr:button' with {
+      label: paragraph.field_dsfr_link.0.title,
+      url: paragraph.field_dsfr_link.0.url,
+    } only %}
+  {% endif %}
+{% endset %}
+<div{{ attributes.addClass('dsfr-editorial', 'dsfr-editorial--callout') }}>
+  {% include 'ui_suite_dsfr:callout' with {
+    title_tag: 'h2',
+    title: paragraph.field_dsfr_heading.value,
+    text: content.field_dsfr_body,
+    button: button,
+  } only %}
+</div>

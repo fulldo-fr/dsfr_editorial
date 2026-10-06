@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {}
+id: dsfr_table
+label: Data table
+description: Data to compare in rows and columns. Never use a table for layout.
+behavior_plugins: {}

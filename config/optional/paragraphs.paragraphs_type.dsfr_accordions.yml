@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {}
+id: dsfr_accordions
+label: Accordions
+description: Questions or details that unfold on click. Essential information should
+  not be hidden in an accordion.
+behavior_plugins: {}

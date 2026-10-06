@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_dsfr_heading
+  - paragraphs.paragraphs_type.dsfr_tabs
+id: paragraph.dsfr_tabs.field_dsfr_heading
+field_name: field_dsfr_heading
+entity_type: paragraph
+bundle: dsfr_tabs
+label: Section title
+description: Optional. It says what the tabs compare.
+required: false
+translatable: true
+default_value: {}
+default_value_callback: ''
+settings: {}
+field_type: string

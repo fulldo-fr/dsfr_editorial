@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Data table section.
+ *
+ * The DSFR table markup (containers, header scopes) is added by the
+ * "DSFR table markup" text filter, so tables written in any text field get it
+ * too. The caption is added by dsfr_editorial_preprocess_paragraph() from the
+ * section title.
+ */
+#}
+<div{{ attributes.addClass('dsfr-editorial', 'dsfr-editorial--table', 'fr-mb-6w') }}>
+  {{ dsfr_table }}
+</div>
