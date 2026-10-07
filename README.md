@@ -62,10 +62,11 @@ overrides one by providing a file with the same name.
 
 ## Legal notice
 
-The DSFR is published under the Etalab 2.0 open licence, and its use is
-reserved to websites of the French public sphere. This module provides
-markup and templates; it does not ship the DSFR itself, nor the Marianne
-font, nor any distinctive sign of the French State.
+The DSFR terms of use reserve the design system, and the identity of the
+French State, to websites of the French public sphere. Check those terms
+before using it on any other website. This module provides markup and
+templates only; it does not ship the DSFR itself, the Marianne typeface, or
+any distinctive sign of the French State.
 
 ## Maintainers
 
