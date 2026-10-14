@@ -12,22 +12,26 @@ bundle: dsfr_quote
 mode: default
 content:
   field_dsfr_author:
+    type: string
     label: hidden
-    settings: {}
+    settings:
+      link_to_entity: false
     third_party_settings: {}
     weight: 1
     region: content
   field_dsfr_source:
+    type: string
     label: hidden
-    settings: {}
+    settings:
+      link_to_entity: false
     third_party_settings: {}
     weight: 2
     region: content
   field_dsfr_summary:
+    type: basic_string
     label: hidden
     settings: {}
     third_party_settings: {}
     weight: 0
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {}

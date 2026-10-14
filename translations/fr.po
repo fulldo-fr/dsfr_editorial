@@ -92,8 +92,8 @@ msgstr "Image légendée"
 msgid "Information"
 msgstr "Information"
 
-msgid "Insert the table with the editor \"Table\" button and declare the first row as a header row."
-msgstr "Insérez le tableau avec le bouton « Tableau » de l'éditeur et déclarez la première ligne comme ligne d'en-tête."
+msgid "Insert the table with the editor \"Table\" button and declare the first row as a header row. If the table disappears once saved, ask the site administrator to allow tables in this text format."
+msgstr "Insérez le tableau avec le bouton « Tableau » de l'éditeur et déclarez la première ligne comme ligne d'en-tête. Si le tableau disparaît à l'enregistrement, demandez à l'administrateur du site d'autoriser les tableaux dans ce format de texte."
 
 msgid "It becomes the caption of the table, as accessibility guidelines require."
 msgstr "Il devient la légende (caption) du tableau, comme l'exige le RGAA."
@@ -173,8 +173,8 @@ msgstr "Le message en une phrase."
 msgid "Title"
 msgstr "Titre"
 
-msgid "Two or three sentences at most."
-msgstr "Deux ou trois phrases au plus."
+msgid "Two or three sentences at most, without formatting."
+msgstr "Deux ou trois phrases au plus, sans mise en forme."
 
 msgid "Two to five tabs; each tab label fits in two or three words."
 msgstr "Deux à cinq onglets ; chaque libellé tient en deux ou trois mots."
@@ -193,3 +193,9 @@ msgstr "Sans guillemets : ils sont ajoutés automatiquement."
 
 msgid "Wraps tables in the DSFR table containers and adds the scope of header cells."
 msgstr "Place les tableaux dans les conteneurs du composant tableau du DSFR et ajoute la portée des cellules d'en-tête."
+
+msgid "Applied by: @formats."
+msgstr "Appliqué par : @formats."
+
+msgid "No text format allows tables and applies the \"DSFR table markup\" filter after \"Limit allowed HTML and correct faulty HTML\": table sections stay empty. Configure a text format on the <a href=\":url\">Text formats and editors</a> page."
+msgstr "Aucun format de texte n'autorise les tableaux en appliquant le filtre « Balisage DSFR des tableaux » après « Limiter les balises HTML autorisées et corriger le HTML défectueux » : les sections Tableau restent vides. Configurez un format de texte sur la page <a href=\":url\">Formats de texte et éditeurs</a>."

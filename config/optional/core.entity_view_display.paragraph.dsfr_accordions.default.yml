@@ -5,22 +5,28 @@ dependencies:
   - field.field.paragraph.dsfr_accordions.field_dsfr_heading
   - field.field.paragraph.dsfr_accordions.field_dsfr_items
   - paragraphs.paragraphs_type.dsfr_accordions
+  module:
+  - entity_reference_revisions
 id: paragraph.dsfr_accordions.default
 targetEntityType: paragraph
 bundle: dsfr_accordions
 mode: default
 content:
   field_dsfr_heading:
+    type: string
     label: hidden
-    settings: {}
+    settings:
+      link_to_entity: false
     third_party_settings: {}
     weight: 0
     region: content
   field_dsfr_items:
+    type: entity_reference_revisions_entity_view
     label: hidden
-    settings: {}
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {}
     weight: 1
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {}

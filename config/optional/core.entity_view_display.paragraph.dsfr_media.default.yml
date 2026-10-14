@@ -6,28 +6,34 @@ dependencies:
   - field.field.paragraph.dsfr_media.field_dsfr_media
   - field.field.paragraph.dsfr_media.field_dsfr_summary
   - paragraphs.paragraphs_type.dsfr_media
+  module:
+  - text
 id: paragraph.dsfr_media.default
 targetEntityType: paragraph
 bundle: dsfr_media
 mode: default
 content:
   field_dsfr_body:
+    type: text_default
     label: hidden
     settings: {}
     third_party_settings: {}
     weight: 2
     region: content
   field_dsfr_media:
+    type: entity_reference_entity_view
     label: hidden
-    settings: {}
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {}
     weight: 0
     region: content
   field_dsfr_summary:
+    type: basic_string
     label: hidden
     settings: {}
     third_party_settings: {}
     weight: 1
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {}

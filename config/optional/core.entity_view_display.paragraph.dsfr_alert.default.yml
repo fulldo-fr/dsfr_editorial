@@ -6,28 +6,33 @@ dependencies:
   - field.field.paragraph.dsfr_alert.field_dsfr_heading
   - field.field.paragraph.dsfr_alert.field_dsfr_summary
   - paragraphs.paragraphs_type.dsfr_alert
+  module:
+  - options
 id: paragraph.dsfr_alert.default
 targetEntityType: paragraph
 bundle: dsfr_alert
 mode: default
 content:
   field_dsfr_alert_type:
+    type: list_default
     label: hidden
     settings: {}
     third_party_settings: {}
     weight: 0
     region: content
   field_dsfr_heading:
+    type: string
     label: hidden
-    settings: {}
+    settings:
+      link_to_entity: false
     third_party_settings: {}
     weight: 1
     region: content
   field_dsfr_summary:
+    type: basic_string
     label: hidden
     settings: {}
     third_party_settings: {}
     weight: 2
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {}

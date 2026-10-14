@@ -2,32 +2,42 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.paragraph.dsfr_callout.field_dsfr_body
   - field.field.paragraph.dsfr_callout.field_dsfr_heading
   - field.field.paragraph.dsfr_callout.field_dsfr_link
+  - field.field.paragraph.dsfr_callout.field_dsfr_summary
   - paragraphs.paragraphs_type.dsfr_callout
+  module:
+  - link
 id: paragraph.dsfr_callout.default
 targetEntityType: paragraph
 bundle: dsfr_callout
 mode: default
 content:
-  field_dsfr_body:
+  field_dsfr_summary:
+    type: basic_string
     label: hidden
     settings: {}
     third_party_settings: {}
     weight: 1
     region: content
   field_dsfr_heading:
+    type: string
     label: hidden
-    settings: {}
+    settings:
+      link_to_entity: false
     third_party_settings: {}
     weight: 0
     region: content
   field_dsfr_link:
+    type: link
     label: hidden
-    settings: {}
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {}
     weight: 2
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {}

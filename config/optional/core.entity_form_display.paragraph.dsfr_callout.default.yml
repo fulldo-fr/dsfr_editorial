@@ -2,20 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.paragraph.dsfr_callout.field_dsfr_body
   - field.field.paragraph.dsfr_callout.field_dsfr_heading
   - field.field.paragraph.dsfr_callout.field_dsfr_link
+  - field.field.paragraph.dsfr_callout.field_dsfr_summary
   - paragraphs.paragraphs_type.dsfr_callout
 id: paragraph.dsfr_callout.default
 targetEntityType: paragraph
 bundle: dsfr_callout
 mode: default
 content:
-  field_dsfr_body:
-    type: text_textarea
+  field_dsfr_summary:
+    type: string_textarea
     weight: 1
     region: content
-    settings: {}
+    settings:
+      rows: 3
+      placeholder: ''
     third_party_settings: {}
   field_dsfr_heading:
     type: string_textfield

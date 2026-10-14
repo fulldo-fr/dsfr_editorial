@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Install, update and requirements functions for DSFR Editorial.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Url;
+use Drupal\filter\FilterFormatInterface;
+
+/**
+ * Implements hook_requirements().
+ *
+ * The table section only renders what its text format lets through. On a new
+ * site no format allows tables with the DSFR markup, and the section stays
+ * empty without any error: the status report says so.
+ */
+function dsfr_editorial_requirements(string $phase): array {
+  if ($phase !== 'runtime') {
+    return [];
+  }
+  $formats = [];
+  foreach (filter_formats() as $format) {
+    if (_dsfr_editorial_format_renders_tables($format)) {
+      $formats[] = $format->label();
+    }
+  }
+  $requirement = [
+    'title' => t('DSFR table markup'),
+  ];
+  if ($formats) {
+    $requirement['value'] = t('Applied by: @formats.', ['@formats' => implode(', ', $formats)]);
+    $requirement['severity'] = REQUIREMENT_OK;
+  }
+  else {
+    $requirement['value'] = t('No text format allows tables and applies the "DSFR table markup" filter after "Limit allowed HTML and correct faulty HTML": table sections stay empty. Configure a text format on the <a href=":url">Text formats and editors</a> page.', [
+      ':url' => Url::fromRoute('filter.admin_overview')->toString(),
+    ]);
+    $requirement['severity'] = REQUIREMENT_WARNING;
+  }
+  return ['dsfr_editorial_table' => $requirement];
+}
+
+/**
+ * Whether a text format keeps tables and gives them the DSFR markup.
+ */
+function _dsfr_editorial_format_renders_tables(FilterFormatInterface $format): bool {
+  $filters = $format->filters();
+  if (!$filters->has('dsfr_editorial_table') || !$filters->get('dsfr_editorial_table')->status) {
+    return FALSE;
+  }
+  if (!$filters->has('filter_html') || !$filters->get('filter_html')->status) {
+    return TRUE;
+  }
+  $html = $filters->get('filter_html');
+  $allowed = (string) ($html->settings['allowed_html'] ?? '');
+  return str_contains($allowed, '<table')
+    && $filters->get('dsfr_editorial_table')->weight > $html->weight;
+}

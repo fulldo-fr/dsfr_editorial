@@ -10,10 +10,10 @@ bundle: dsfr_highlight
 mode: default
 content:
   field_dsfr_summary:
+    type: basic_string
     label: hidden
     settings: {}
     third_party_settings: {}
     weight: 0
     region: content
-hidden:
-  search_api_excerpt: true
+hidden: {}

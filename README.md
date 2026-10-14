@@ -38,6 +38,10 @@ Enable it on your text formats, **after** "Limit allowed HTML and correct
 faulty HTML", and allow `<table> <caption> <thead> <tbody> <tfoot> <tr>
 <th rowspan colspan> <td rowspan colspan>`.
 
+Until a text format does so, table sections stay empty: the status report
+shows a warning, and the help text of the table field tells editors to ask
+their administrator.
+
 ## Requirements
 
 - Drupal 10.3 or 11.
