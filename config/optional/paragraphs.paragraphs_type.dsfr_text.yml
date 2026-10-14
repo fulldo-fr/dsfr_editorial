@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-    - dsfr_editorial
+      - dsfr_editorial
 id: dsfr_text
 label: Text
 description: 'Formatted text: headings, lists, links, tables.'

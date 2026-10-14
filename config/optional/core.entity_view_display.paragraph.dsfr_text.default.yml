@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.paragraph.dsfr_text.field_dsfr_body
-  - paragraphs.paragraphs_type.dsfr_text
+    - field.field.paragraph.dsfr_text.field_dsfr_body
+    - paragraphs.paragraphs_type.dsfr_text
   module:
-  - text
+    - text
 id: paragraph.dsfr_text.default
 targetEntityType: paragraph
 bundle: dsfr_text

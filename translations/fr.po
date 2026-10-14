@@ -131,7 +131,7 @@ msgstr "Une parole rapportée, avec son auteur."
 msgid "Required for a chart, a diagram or a map: everything the image shows, written as text."
 msgstr "Obligatoire pour un graphique, un schéma ou une carte : tout ce que l'image montre, rédigé en texte."
 
-msgid "Role, organisation or publication."
+msgid "Role, organization or publication."
 msgstr "Fonction, organisme ou publication."
 
 msgid "Section title"

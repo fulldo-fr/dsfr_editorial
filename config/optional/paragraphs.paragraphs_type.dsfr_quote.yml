@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-    - dsfr_editorial
+      - dsfr_editorial
 id: dsfr_quote
 label: Quote
 description: Reported words, with their author.

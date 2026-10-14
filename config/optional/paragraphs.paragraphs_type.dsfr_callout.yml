@@ -3,9 +3,8 @@ status: true
 dependencies:
   enforced:
     module:
-    - dsfr_editorial
+      - dsfr_editorial
 id: dsfr_callout
 label: Callout
-description: A block that draws attention to important information, with an optional
-  button.
+description: A block that draws attention to important information, with an optional button.
 behavior_plugins: {}

@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-    - dsfr_editorial
+      - dsfr_editorial
 id: dsfr_table
 label: Data table
 description: Data to compare in rows and columns. Never use a table for layout.

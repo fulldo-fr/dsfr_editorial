@@ -2,25 +2,25 @@ langcode: en
 status: true
 dependencies:
   module:
-  - options
-  - paragraphs
+    - options
+    - paragraphs
   enforced:
     module:
-    - dsfr_editorial
+      - dsfr_editorial
 id: paragraph.field_dsfr_alert_type
 field_name: field_dsfr_alert_type
 entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
-  - value: info
-    label: Information
-  - value: success
-    label: Success
-  - value: warning
-    label: Warning
-  - value: error
-    label: Error
+    - value: info
+      label: Information
+    - value: success
+      label: Success
+    - value: warning
+      label: Warning
+    - value: error
+      label: Error
   allowed_values_function: ''
 module: options
 locked: false

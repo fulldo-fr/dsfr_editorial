@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.storage.paragraph.field_dsfr_heading
-  - paragraphs.paragraphs_type.dsfr_alert
+    - field.storage.paragraph.field_dsfr_heading
+    - paragraphs.paragraphs_type.dsfr_alert
 id: paragraph.dsfr_alert.field_dsfr_heading
 field_name: field_dsfr_heading
 entity_type: paragraph

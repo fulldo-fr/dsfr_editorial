@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.paragraph.dsfr_tabs.field_dsfr_heading
-  - field.field.paragraph.dsfr_tabs.field_dsfr_items
-  - paragraphs.paragraphs_type.dsfr_tabs
+    - field.field.paragraph.dsfr_tabs.field_dsfr_heading
+    - field.field.paragraph.dsfr_tabs.field_dsfr_items
+    - paragraphs.paragraphs_type.dsfr_tabs
 id: paragraph.dsfr_tabs.default
 targetEntityType: paragraph
 bundle: dsfr_tabs

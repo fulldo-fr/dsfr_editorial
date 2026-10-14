@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.paragraph.dsfr_quote.field_dsfr_author
-  - field.field.paragraph.dsfr_quote.field_dsfr_source
-  - field.field.paragraph.dsfr_quote.field_dsfr_summary
-  - paragraphs.paragraphs_type.dsfr_quote
+    - field.field.paragraph.dsfr_quote.field_dsfr_author
+    - field.field.paragraph.dsfr_quote.field_dsfr_source
+    - field.field.paragraph.dsfr_quote.field_dsfr_summary
+    - paragraphs.paragraphs_type.dsfr_quote
 id: paragraph.dsfr_quote.default
 targetEntityType: paragraph
 bundle: dsfr_quote

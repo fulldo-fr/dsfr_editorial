@@ -2,18 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.storage.paragraph.field_dsfr_body
-  - paragraphs.paragraphs_type.dsfr_table
+    - field.storage.paragraph.field_dsfr_body
+    - paragraphs.paragraphs_type.dsfr_table
   module:
-  - text
+    - text
 id: paragraph.dsfr_table.field_dsfr_body
 field_name: field_dsfr_body
 entity_type: paragraph
 bundle: dsfr_table
 label: Table
-description: Insert the table with the editor "Table" button and declare the first
-  row as a header row. If the table disappears once saved, ask the site administrator
-  to allow tables in this text format.
+description: Insert the table with the editor "Table" button and declare the first row as a header row. If the table disappears once saved, ask the site administrator to allow tables in this text format.
 required: true
 translatable: true
 default_value: {}

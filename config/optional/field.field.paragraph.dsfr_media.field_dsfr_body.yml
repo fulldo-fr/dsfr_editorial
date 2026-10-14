@@ -2,17 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.storage.paragraph.field_dsfr_body
-  - paragraphs.paragraphs_type.dsfr_media
+    - field.storage.paragraph.field_dsfr_body
+    - paragraphs.paragraphs_type.dsfr_media
   module:
-  - text
+    - text
 id: paragraph.dsfr_media.field_dsfr_body
 field_name: field_dsfr_body
 entity_type: paragraph
 bundle: dsfr_media
 label: Detailed description
-description: 'Required for a chart, a diagram or a map: everything the image shows,
-  written as text.'
+description: 'Required for a chart, a diagram or a map: everything the image shows, written as text.'
 required: false
 translatable: true
 default_value: {}

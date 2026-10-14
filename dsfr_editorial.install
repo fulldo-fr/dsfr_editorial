@@ -22,7 +22,10 @@ function dsfr_editorial_requirements(string $phase): array {
     return [];
   }
   $formats = [];
-  foreach (filter_formats() as $format) {
+  // filter_formats() is deprecated in Drupal 11.4, and its replacement does
+  // not exist in Drupal 10.3: load the enabled formats from their storage.
+  $storage = \Drupal::entityTypeManager()->getStorage('filter_format');
+  foreach ($storage->loadByProperties(['status' => TRUE]) as $format) {
     if (_dsfr_editorial_format_renders_tables($format)) {
       $formats[] = $format->label();
     }

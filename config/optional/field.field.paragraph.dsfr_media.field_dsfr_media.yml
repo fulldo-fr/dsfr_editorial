@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.storage.paragraph.field_dsfr_media
-  - media.type.image
-  - paragraphs.paragraphs_type.dsfr_media
+    - field.storage.paragraph.field_dsfr_media
+    - media.type.image
+    - paragraphs.paragraphs_type.dsfr_media
 id: paragraph.dsfr_media.field_dsfr_media
 field_name: field_dsfr_media
 entity_type: paragraph

@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.storage.paragraph.field_dsfr_summary
-  - paragraphs.paragraphs_type.dsfr_quote
+    - field.storage.paragraph.field_dsfr_summary
+    - paragraphs.paragraphs_type.dsfr_quote
 id: paragraph.dsfr_quote.field_dsfr_summary
 field_name: field_dsfr_summary
 entity_type: paragraph

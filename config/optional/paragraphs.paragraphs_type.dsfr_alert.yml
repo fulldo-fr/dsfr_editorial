@@ -3,9 +3,8 @@ status: true
 dependencies:
   enforced:
     module:
-    - dsfr_editorial
+      - dsfr_editorial
 id: dsfr_alert
 label: Alert
-description: 'A service message that must be seen: a suspended procedure, a deadline,
-  a change.'
+description: 'A service message that must be seen: a suspended procedure, a deadline, a change.'
 behavior_plugins: {}

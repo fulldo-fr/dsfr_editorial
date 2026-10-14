@@ -6,3 +6,7 @@ include:
       - '/includes/include.drupalci.main.yml'
       - '/includes/include.drupalci.variables.yml'
       - '/includes/include.drupalci.workflows.yml'
+
+variables:
+  # The French translation is not English: keep it out of the spell check.
+  _CSPELL_IGNORE_PATHS: '"translations/*"'

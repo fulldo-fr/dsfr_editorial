@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.storage.paragraph.field_dsfr_items
-  - paragraphs.paragraphs_type.dsfr_tabs
+    - field.storage.paragraph.field_dsfr_items
+    - paragraphs.paragraphs_type.dsfr_tabs
   module:
-  - entity_reference_revisions
+    - entity_reference_revisions
 id: paragraph.dsfr_tabs.field_dsfr_items
 field_name: field_dsfr_items
 entity_type: paragraph

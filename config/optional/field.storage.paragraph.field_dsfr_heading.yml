@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   module:
-  - paragraphs
+    - paragraphs
   enforced:
     module:
-    - dsfr_editorial
+      - dsfr_editorial
 id: paragraph.field_dsfr_heading
 field_name: field_dsfr_heading
 entity_type: paragraph

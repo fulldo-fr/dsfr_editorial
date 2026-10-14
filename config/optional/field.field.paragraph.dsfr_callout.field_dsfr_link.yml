@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.storage.paragraph.field_dsfr_link
-  - paragraphs.paragraphs_type.dsfr_callout
+    - field.storage.paragraph.field_dsfr_link
+    - paragraphs.paragraphs_type.dsfr_callout
   module:
-  - link
+    - link
 id: paragraph.dsfr_callout.field_dsfr_link
 field_name: field_dsfr_link
 entity_type: paragraph

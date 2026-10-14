@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
-  - media
-  - paragraphs
+    - media
+    - paragraphs
   enforced:
     module:
-    - dsfr_editorial
+      - dsfr_editorial
 id: paragraph.field_dsfr_media
 field_name: field_dsfr_media
 entity_type: paragraph

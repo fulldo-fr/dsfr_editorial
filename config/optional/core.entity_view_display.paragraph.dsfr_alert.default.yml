@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.paragraph.dsfr_alert.field_dsfr_alert_type
-  - field.field.paragraph.dsfr_alert.field_dsfr_heading
-  - field.field.paragraph.dsfr_alert.field_dsfr_summary
-  - paragraphs.paragraphs_type.dsfr_alert
+    - field.field.paragraph.dsfr_alert.field_dsfr_alert_type
+    - field.field.paragraph.dsfr_alert.field_dsfr_heading
+    - field.field.paragraph.dsfr_alert.field_dsfr_summary
+    - paragraphs.paragraphs_type.dsfr_alert
   module:
-  - options
+    - options
 id: paragraph.dsfr_alert.default
 targetEntityType: paragraph
 bundle: dsfr_alert

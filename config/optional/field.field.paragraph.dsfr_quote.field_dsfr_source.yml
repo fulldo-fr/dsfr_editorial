@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.storage.paragraph.field_dsfr_source
-  - paragraphs.paragraphs_type.dsfr_quote
+    - field.storage.paragraph.field_dsfr_source
+    - paragraphs.paragraphs_type.dsfr_quote
 id: paragraph.dsfr_quote.field_dsfr_source
 field_name: field_dsfr_source
 entity_type: paragraph
 bundle: dsfr_quote
 label: Source
-description: Role, organisation or publication.
+description: Role, organization or publication.
 required: false
 translatable: true
 default_value: {}
